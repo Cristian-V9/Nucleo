@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fila de un resumen de valores: etiqueta a la izquierda y valor a la derecha. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/espacio_xs">
+
+    <TextView
+        android:id="@+id/etiqueta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="@style/Texto.Nucleo.Secundario"
+        android:textColor="@color/texto_etiqueta"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+        android:textSize="14sp" />
+</LinearLayout>

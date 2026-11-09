@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Fila de opción del perfil: ícono, texto y flecha. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/espacio_l">
+
+    <ImageView
+        android:id="@+id/icono"
+        android:layout_width="@dimen/icono_s"
+        android:layout_height="@dimen/icono_s"
+        android:importantForAccessibility="no"
+        app:tint="?attr/colorRol" />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espacio_m"
+        android:layout_weight="1"
+        android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_flecha_derecha"
+        app:tint="@color/texto_sutil" />
+</LinearLayout>

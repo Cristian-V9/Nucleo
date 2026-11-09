@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Contenido de diálogo con un solo campo (contraseña de confirmación o motivo). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/espacio_xl"
+    android:paddingTop="@dimen/espacio_s">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/campo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+</FrameLayout>

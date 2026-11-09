@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Perfil (CRUD de perfil, RF-10). Lo comparten comprador y vendedor; cada rol ve sus secciones. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla">
+
+        <!-- Datos del usuario y foto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+                <TextView
+                    android:id="@+id/iniciales"
+                    android:layout_width="@dimen/avatar_grande"
+                    android:layout_height="@dimen/avatar_grande"
+                    android:background="@drawable/bg_circulo"
+                    android:backgroundTint="?attr/colorRolSuave"
+                    android:gravity="center"
+                    android:textAppearance="@style/Texto.Nucleo.Titulo"
+                    android:textColor="?attr/colorRol" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/foto"
+                    android:layout_width="@dimen/avatar_grande"
+                    android:layout_height="@dimen/avatar_grande"
+                    android:contentDescription="@string/nav_perfil"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/Forma.Nucleo.Circulo" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botonFoto"
+                    style="@style/Widget.Nucleo.BotonIcono.Primario"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="bottom|end"
+                    android:minWidth="36dp"
+                    android:minHeight="36dp"
+                    android:contentDescription="@string/cambiar_foto"
+                    app:cornerRadius="18dp"
+                    app:icon="@drawable/ic_camara"
+                    app:iconSize="16dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espacio_l"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pildoraRol"
+                    style="@style/Widget.Nucleo.Pildora.Rol" />
+
+                <TextView
+                    android:id="@+id/nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_xs"
+                    android:textAppearance="@style/Texto.Nucleo.Titulo"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/correo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Texto.Nucleo.Secundario" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonEditar"
+            style="@style/Widget.Nucleo.Boton.Contorno.Pequeno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:text="@string/editar_perfil"
+            app:icon="@drawable/ic_editar"
+            app:iconGravity="textStart"
+            app:iconSize="@dimen/icono_s" />
+
+        <!-- Datos del comercio (solo vendedor) -->
+        <LinearLayout
+            android:id="@+id/grupoComercio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="@dimen/espacio_l"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mi_comercio"
+                android:textAppearance="@style/Texto.Nucleo.Secundario" />
+
+            <TextView
+                android:id="@+id/razonSocial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_xs"
+                android:drawablePadding="6dp"
+                android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita"
+                app:drawableEndCompat="@drawable/ic_verificado"
+                app:drawableTint="@color/exito" />
+
+            <TextView
+                android:id="@+id/datosComercio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_xs"
+                android:lineSpacingExtra="3dp"
+                android:textAppearance="@style/Texto.Nucleo.Secundario" />
+        </LinearLayout>
+
+        <!-- Opciones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/espacio_l"
+                android:paddingEnd="@dimen/espacio_s">
+
+                <ImageView
+                    android:layout_width="@dimen/icono_s"
+                    android:layout_height="@dimen/icono_s"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_huella"
+                    app:tint="?attr/colorRol" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/interruptorHuella"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_m"
+                    android:layout_weight="1"
+                    android:text="@string/ingreso_huella"
+                    android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View style="@style/Widget.Nucleo.Separador" />
+
+            <include
+                android:id="@+id/opcionPrivacidad"
+                layout="@layout/include_opcion" />
+
+            <View style="@style/Widget.Nucleo.Separador" />
+
+            <include
+                android:id="@+id/opcionSalir"
+                layout="@layout/include_opcion" />
+        </LinearLayout>
+
+        <!-- Historial de pedidos (solo comprador) -->
+        <LinearLayout
+            android:id="@+id/grupoPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_xl"
+                android:text="@string/mis_pedidos"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <TextView
+                android:id="@+id/textoSinPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:text="@string/sin_pedidos"
+                android:textAppearance="@style/Texto.Nucleo.Secundario"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonEliminarCuenta"
+            style="@style/Widget.Nucleo.Boton.Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:text="@string/eliminar_cuenta"
+            android:textColor="@color/error" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

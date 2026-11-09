@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafo de navegación del acceso. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.nucleo.tienda.ui.auth.LoginFragment"
+        android:label="@string/ingresar">
+        <action android:id="@+id/aRegistro" app:destination="@id/registroFragment" />
+        <action android:id="@+id/aRecuperar" app:destination="@id/recuperarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.nucleo.tienda.ui.auth.RegistroFragment"
+        android:label="@string/registro_titulo">
+        <action android:id="@+id/aRegistroComercio" app:destination="@id/registroComercioFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registroComercioFragment"
+        android:name="com.nucleo.tienda.ui.auth.RegistroComercioFragment"
+        android:label="@string/registro_comercio_titulo" />
+
+    <fragment
+        android:id="@+id/recuperarFragment"
+        android:name="com.nucleo.tienda.ui.auth.RecuperarFragment"
+        android:label="@string/recuperar_titulo" />
+</navigation>

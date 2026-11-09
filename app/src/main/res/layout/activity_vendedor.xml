@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Pantalla principal del rol Vendedor: arriba el contenedor de fragments (NavHostFragment)
+    y abajo la barra de navegación inferior (Bottom Navigation).
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical">
+
+    <!-- Contenedor donde se cargan las pantallas del grafo nav_vendedor -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/contenedor"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_vendedor" />
+
+    <View
+        android:id="@+id/separadorNavegacion"
+        style="@style/Widget.Nucleo.Separador" />
+
+    <!-- Barra inferior con las opciones de menu_vendedor -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navegacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/menu_vendedor" />
+</LinearLayout>

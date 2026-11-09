@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.nucleo.tienda.ui.admin.DashboardFragment"
+        android:label="@string/panel_general" />
+
+    <fragment
+        android:id="@+id/usuariosFragment"
+        android:name="com.nucleo.tienda.ui.admin.UsuariosFragment"
+        android:label="@string/usuarios_titulo" />
+
+    <fragment
+        android:id="@+id/usuarioFormFragment"
+        android:name="com.nucleo.tienda.ui.admin.UsuarioFormFragment"
+        android:label="@string/nuevo_usuario">
+        <argument android:name="usuarioId" app:argType="string" app:nullable="true" android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productosAdminFragment"
+        android:name="com.nucleo.tienda.ui.admin.ProductosAdminFragment"
+        android:label="@string/productos_titulo" />
+
+    <fragment
+        android:id="@+id/ventasFragment"
+        android:name="com.nucleo.tienda.ui.admin.VentasFragment"
+        android:label="@string/reporte_ventas" />
+
+    <fragment
+        android:id="@+id/solicitudesFragment"
+        android:name="com.nucleo.tienda.ui.admin.SolicitudesFragment"
+        android:label="@string/solicitudes_titulo" />
+</navigation>

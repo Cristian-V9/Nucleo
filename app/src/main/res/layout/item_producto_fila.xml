@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Producto en lista con acciones. Lo usan el vendedor (editar/eliminar) y el administrador (ocultar/mostrar). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/espacio_s">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="@dimen/espacio_xs">
+
+        <FrameLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_imagen_producto">
+
+            <ImageView
+                android:id="@+id/icono"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                app:tint="@color/icono_producto" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/espacio_m"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/detalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="2"
+                android:textAppearance="@style/Texto.Nucleo.Secundario"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/aviso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="@style/Texto.Nucleo.Secundario"
+                android:textColor="@color/advertencia"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonEditar"
+            style="@style/Widget.Nucleo.BotonIcono.Plano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/editar"
+            app:icon="@drawable/ic_editar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonEliminar"
+            style="@style/Widget.Nucleo.BotonIcono.Plano"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/eliminar"
+            app:icon="@drawable/ic_eliminar"
+            app:iconTint="@color/error" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonModerar"
+            style="@style/Widget.Nucleo.Boton.Contorno.Pequeno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/espacio_s"
+            android:minHeight="40dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

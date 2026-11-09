@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_comprador"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.nucleo.tienda.ui.comprador.InicioFragment"
+        android:label="@string/nav_inicio" />
+
+    <fragment
+        android:id="@+id/catalogoFragment"
+        android:name="com.nucleo.tienda.ui.comprador.CatalogoFragment"
+        android:label="@string/nav_catalogo" />
+
+    <fragment
+        android:id="@+id/detalleProductoFragment"
+        android:name="com.nucleo.tienda.ui.comprador.DetalleProductoFragment"
+        android:label="@string/detalle_titulo">
+        <argument android:name="referencia" app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="com.nucleo.tienda.ui.comprador.CarritoFragment"
+        android:label="@string/nav_carrito" />
+
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="com.nucleo.tienda.ui.comprador.PagoFragment"
+        android:label="@string/pago_titulo" />
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.nucleo.tienda.ui.comun.PerfilFragment"
+        android:label="@string/nav_perfil" />
+</navigation>

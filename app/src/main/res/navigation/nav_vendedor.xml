@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_vendedor"
+    app:startDestination="@id/productosVendedorFragment">
+
+    <fragment
+        android:id="@+id/productosVendedorFragment"
+        android:name="com.nucleo.tienda.ui.vendedor.ProductosVendedorFragment"
+        android:label="@string/mis_productos" />
+
+    <fragment
+        android:id="@+id/productoFormFragment"
+        android:name="com.nucleo.tienda.ui.vendedor.ProductoFormFragment"
+        android:label="@string/nuevo_producto">
+        <argument android:name="productoId" app:argType="string" app:nullable="true" android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pedidosVendedorFragment"
+        android:name="com.nucleo.tienda.ui.vendedor.PedidosVendedorFragment"
+        android:label="@string/pedidos_recibidos" />
+
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.nucleo.tienda.ui.comun.PerfilFragment"
+        android:label="@string/nav_perfil" />
+</navigation>

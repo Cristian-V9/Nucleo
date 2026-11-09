@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Encabezado reutilizable (se incluye con <include>): botón de volver y título de la pantalla. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/margen_pantalla"
+    android:paddingTop="@dimen/espacio_l"
+    android:paddingBottom="@dimen/espacio_s">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonVolver"
+        style="@style/Widget.Nucleo.BotonIcono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/volver"
+        app:icon="@drawable/ic_volver" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espacio_m"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/Texto.Nucleo.Titulo"
+        android:textSize="22sp" />
+</LinearLayout>
