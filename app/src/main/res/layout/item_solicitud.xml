@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Solicitud de un comercio: datos legales, documentos y decisión del administrador (RF-03). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/espacio_m">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espacio_l">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/razonSocial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Texto.Nucleo.Secundario"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/estado"
+                style="@style/Widget.Nucleo.Pildora" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/datos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:lineSpacingExtra="3dp"
+            android:textAppearance="@style/Texto.Nucleo.Secundario"
+            android:textColor="@color/texto_etiqueta" />
+
+        <TextView
+            android:id="@+id/documentoRut"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:background="@drawable/bg_imagen_producto"
+            android:drawablePadding="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/espacio_m"
+            android:text="@string/documento_rut"
+            android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+            android:textSize="13sp"
+            app:drawableEndCompat="@drawable/ic_ver"
+            app:drawableStartCompat="@drawable/ic_documento"
+            app:drawableTint="?attr/colorRol" />
+
+        <TextView
+            android:id="@+id/documentoMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/espacio_s"
+            android:background="@drawable/bg_imagen_producto"
+            android:drawablePadding="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/espacio_m"
+            android:text="@string/documento_matricula"
+            android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+            android:textSize="13sp"
+            app:drawableEndCompat="@drawable/ic_ver"
+            app:drawableStartCompat="@drawable/ic_documento"
+            app:drawableTint="?attr/colorRol" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonRechazar"
+                style="@style/Widget.Nucleo.Boton.Peligro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/espacio_s"
+                android:layout_weight="1"
+                android:text="@string/rechazar"
+                app:icon="@drawable/ic_cerrar"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/icono_s" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonAprobar"
+                style="@style/Widget.Nucleo.Boton.Pequeno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espacio_s"
+                android:layout_weight="1"
+                android:text="@string/aprobar"
+                app:icon="@drawable/ic_check"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/icono_s" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

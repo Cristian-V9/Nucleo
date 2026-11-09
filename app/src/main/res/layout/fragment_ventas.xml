@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reporte de ventas del administrador: totales, gráfica mensual, ventas por comercio y más vendidos. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/espacio_l">
+
+        <include
+            android:id="@+id/encabezado"
+            layout="@layout/include_encabezado_rol" />
+
+        <include
+            android:id="@+id/estadisticaTotal"
+            layout="@layout/include_estadistica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_s" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/estadisticaPedidos"
+                layout="@layout/include_estadistica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/estadisticaPromedio"
+                layout="@layout/include_estadistica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Gráfica de barras construida con vistas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="@dimen/espacio_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ventas_por_mes"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/grafica"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_grafica"
+                android:layout_marginTop="@dimen/espacio_l"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="@dimen/espacio_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ventas_por_comercio"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/listaComercios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_s"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:background="@drawable/bg_tarjeta"
+            android:orientation="vertical"
+            android:padding="@dimen/espacio_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mas_vendidos"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/listaMasVendidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_s"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

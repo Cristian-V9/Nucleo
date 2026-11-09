@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dashboard principal del administrador: indicadores, alertas y pedidos recientes. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/espacio_l">
+
+        <include
+            android:id="@+id/encabezado"
+            layout="@layout/include_encabezado_rol" />
+
+        <!-- Cuadrícula de indicadores 2 × 2 (GridLayout) -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="@dimen/espacio_s"
+            android:columnCount="2"
+            android:useDefaultMargins="false">
+
+            <include
+                android:id="@+id/estadisticaComercios"
+                layout="@layout/include_estadistica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp" />
+
+            <include
+                android:id="@+id/estadisticaSolicitudes"
+                layout="@layout/include_estadistica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp" />
+
+            <include
+                android:id="@+id/estadisticaUsuarios"
+                layout="@layout/include_estadistica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp" />
+
+            <include
+                android:id="@+id/estadisticaVentas"
+                layout="@layout/include_estadistica"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:text="@string/requiere_atencion"
+            android:textAppearance="@style/Texto.Nucleo.Subtitulo" />
+
+        <include
+            android:id="@+id/alertaSolicitudes"
+            layout="@layout/include_alerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m" />
+
+        <include
+            android:id="@+id/alertaProductos"
+            layout="@layout/include_alerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_s" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_xl"
+            android:text="@string/pedidos_recientes"
+            android:textAppearance="@style/Texto.Nucleo.Subtitulo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
