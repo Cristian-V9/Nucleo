@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pasarela de pagos: dirección de entrega, método de pago y confirmación con huella (RF-08). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/encabezado"
+        layout="@layout/include_encabezado" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margen_pantalla"
+            android:paddingBottom="@dimen/espacio_l">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_s"
+                android:text="@string/direccion_entrega"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo"
+                android:textSize="16sp" />
+
+            <!-- Vista previa del mapa (drawable con capas) -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:background="@drawable/bg_mapa">
+
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_circulo"
+                    android:backgroundTint="@color/primario_suave">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_ubicacion"
+                        app:tint="@color/primario_claro" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:hint="@string/direccion"
+                app:startIconDrawable="@drawable/ic_ubicacion">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:maxLines="2"
+                    android:text="@string/direccion_ejemplo" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonUbicacion"
+                style="@style/Widget.Nucleo.Boton.Contorno.Pequeno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_s"
+                android:text="@string/usar_ubicacion"
+                app:icon="@drawable/ic_mira"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/icono_s" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_xl"
+                android:text="@string/metodo_pago"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo"
+                android:textSize="16sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tarjetaMercadoPago"
+                style="@style/Widget.Nucleo.Tarjeta.Seleccionable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:checked="true"
+                app:checkedIconGravity="TOP_END">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/espacio_l">
+
+                    <FrameLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/bg_imagen_producto">
+
+                        <ImageView
+                            android:layout_width="@dimen/icono_m"
+                            android:layout_height="@dimen/icono_m"
+                            android:layout_gravity="center"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_tarjeta"
+                            app:tint="@color/primario_claro" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espacio_m"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mercado_pago"
+                            android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mercado_pago_desc"
+                            android:textAppearance="@style/Texto.Nucleo.Secundario"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <include
+                android:id="@+id/avisoSeguridad"
+                layout="@layout/include_aviso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:background="@drawable/bg_tarjeta"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/espacio_xs"
+                android:paddingStart="@dimen/espacio_l"
+                android:paddingEnd="@dimen/espacio_s">
+
+                <ImageView
+                    android:layout_width="@dimen/icono_m"
+                    android:layout_height="@dimen/icono_m"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_huella"
+                    app:tint="@color/primario_claro" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/interruptorHuella"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_m"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/confirmar_huella"
+                    android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/resumen"
+                layout="@layout/include_resumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_l" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_barra_inferior"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/margen_pantalla"
+        android:paddingVertical="@dimen/espacio_m">
+
+        <TextView
+            android:id="@+id/textoResumen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/Texto.Nucleo.Secundario" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonPagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_s"
+            app:icon="@drawable/ic_candado"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

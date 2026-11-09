@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Acceso rápido a una categoría en la pantalla de inicio (lista horizontal). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="104dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/espacio_s">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/espacio_xs"
+        android:paddingVertical="@dimen/espacio_m">
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circulo"
+            android:backgroundTint="?attr/colorRolSuave">
+
+            <ImageView
+                android:id="@+id/icono"
+                android:layout_width="@dimen/icono_m"
+                android:layout_height="@dimen/icono_m"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                app:tint="?attr/colorRol" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_s"
+            android:gravity="center"
+            android:lines="2"
+            android:textAppearance="@style/Texto.Nucleo.Etiqueta"
+            android:textSize="12sp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inicio del comprador: búsqueda, categorías y productos más buscados (RF-02). -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/espacio_l">
+
+        <include
+            android:id="@+id/encabezado"
+            layout="@layout/include_encabezado_rol" />
+
+        <!-- Barra de búsqueda: abre el catálogo -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/barraBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_s"
+            app:cardCornerRadius="@dimen/radio_m"
+            app:strokeColor="@color/borde_fuerte">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/espacio_l">
+
+                <ImageView
+                    android:layout_width="@dimen/icono_m"
+                    android:layout_height="@dimen/icono_m"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_buscar"
+                    app:tint="@color/texto_secundario" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_m"
+                    android:text="@string/buscar_hint"
+                    android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+                    android:textColor="@color/texto_sutil" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_ubicacion"
+                app:tint="@color/primario_claro" />
+
+            <TextView
+                android:id="@+id/textoDireccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:textAppearance="@style/Texto.Nucleo.Etiqueta" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_xl"
+            android:text="@string/categorias"
+            android:textAppearance="@style/Texto.Nucleo.Subtitulo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/margen_pantalla"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_pantalla"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:layout_marginEnd="@dimen/espacio_s"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/mas_buscados"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonVerTodo"
+                style="@style/Widget.Nucleo.Boton.Texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_todo" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaDestacados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

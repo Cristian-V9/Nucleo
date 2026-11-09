@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dato de la ficha técnica (por ejemplo, Memoria: 8 GB GDDR6). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/bg_tarjeta"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/espacio_m"
+    android:paddingVertical="@dimen/espacio_s">
+
+    <TextView
+        android:id="@+id/clave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Texto.Nucleo.Secundario"
+        android:textSize="@dimen/texto_pequeno" />
+
+    <TextView
+        android:id="@+id/valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita"
+        android:textSize="13sp" />
+</LinearLayout>

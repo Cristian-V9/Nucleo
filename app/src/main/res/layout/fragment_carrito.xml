@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carrito de compras: productos de un solo comercio, cantidades y totales (RF-07). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/encabezado"
+        layout="@layout/include_encabezado_rol" />
+
+    <!-- Estado vacío -->
+    <LinearLayout
+        android:id="@+id/grupoVacio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:background="@drawable/bg_circulo"
+            android:backgroundTint="@color/superficie_alta">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_carrito"
+                app:tint="@color/texto_secundario" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:text="@string/carrito_vacio"
+            android:textAppearance="@style/Texto.Nucleo.Subtitulo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_s"
+            android:gravity="center"
+            android:text="@string/carrito_vacio_desc"
+            android:textAppearance="@style/Texto.Nucleo.Secundario"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonIrCatalogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_xl"
+            android:paddingHorizontal="28dp"
+            android:text="@string/ir_catalogo" />
+    </LinearLayout>
+
+    <!-- Contenido del carrito -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/grupoContenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/margen_pantalla"
+            android:paddingTop="@dimen/espacio_s"
+            android:paddingBottom="@dimen/espacio_l">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tarjeta"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/espacio_m">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_imagen_producto">
+
+                    <ImageView
+                        android:layout_width="@dimen/icono_m"
+                        android:layout_height="@dimen/icono_m"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_tienda"
+                        app:tint="@color/primario_claro" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/espacio_m"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pedido_a"
+                        android:textAppearance="@style/Texto.Nucleo.Secundario"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textoComercio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="6dp"
+                        android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita"
+                        app:drawableEndCompat="@drawable/ic_verificado"
+                        app:drawableTint="@color/exito" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/aviso"
+                layout="@layout/include_aviso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listaCarrito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_m"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <include
+                android:id="@+id/resumen"
+                layout="@layout/include_resumen" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botonPagar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margen_pantalla"
+        android:layout_marginBottom="@dimen/espacio_m"
+        android:text="@string/continuar_pago" />
+</LinearLayout>
