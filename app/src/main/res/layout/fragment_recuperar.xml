@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Recuperación de contraseña: formulario y estado de "enlace enviado". -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/encabezado"
+        layout="@layout/include_encabezado" />
+
+    <!-- Paso 1: escribir el correo -->
+    <LinearLayout
+        android:id="@+id/grupoFormulario"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla">
+
+        <FrameLayout
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:background="@drawable/bg_circulo"
+            android:backgroundTint="@color/primario_suave">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_candado"
+                app:tint="@color/primario_claro" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_l"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/recuperar_mensaje"
+            android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+            android:textColor="@color/texto_etiqueta" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/campoCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_xl"
+            android:hint="@string/correo"
+            app:startIconDrawable="@drawable/ic_correo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSend"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_xl"
+            android:text="@string/enviar_enlace"
+            app:icon="@drawable/ic_correo"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+
+    <!-- Paso 2: confirmación (oculto hasta enviar) -->
+    <LinearLayout
+        android:id="@+id/grupoEnviado"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/bg_circulo"
+            android:backgroundTint="@color/exito_suave">
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_correo"
+                app:tint="@color/exito" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_xl"
+            android:text="@string/recuperar_enviado_titulo"
+            android:textAppearance="@style/Texto.Nucleo.Titulo" />
+
+        <TextView
+            android:id="@+id/textoEnviado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+            android:textColor="@color/texto_etiqueta" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botonVolverLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/volver_inicio_sesion" />
+    </LinearLayout>
+</LinearLayout>
