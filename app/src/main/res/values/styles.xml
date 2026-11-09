@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== Formas ===================== -->
+    <style name="Forma.Nucleo.Pequena" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radio_s</item>
+    </style>
+
+    <style name="Forma.Nucleo.Mediana" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radio_m</item>
+    </style>
+
+    <style name="Forma.Nucleo.Grande" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radio_l</item>
+    </style>
+
+    <style name="Forma.Nucleo.Circulo" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ===================== Textos ===================== -->
+    <style name="Texto.Nucleo.TituloGrande" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:fontFamily">@font/space_grotesk_bold</item>
+        <item name="fontFamily">@font/space_grotesk_bold</item>
+        <item name="android:textSize">@dimen/texto_titulo_grande</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="Texto.Nucleo.Titulo" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">@font/space_grotesk_bold</item>
+        <item name="fontFamily">@font/space_grotesk_bold</item>
+        <item name="android:textSize">@dimen/texto_titulo</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="Texto.Nucleo.Subtitulo" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">@font/space_grotesk_bold</item>
+        <item name="fontFamily">@font/space_grotesk_bold</item>
+        <item name="android:textSize">@dimen/texto_subtitulo</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="Texto.Nucleo.Cifra" parent="Texto.Nucleo.Subtitulo">
+        <item name="android:textSize">@dimen/texto_cifra</item>
+    </style>
+
+    <style name="Texto.Nucleo.Cuerpo" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/plex</item>
+        <item name="fontFamily">@font/plex</item>
+        <item name="android:textSize">@dimen/texto_cuerpo</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <!-- Estilo por defecto de los TextView (lo asigna el tema). -->
+    <style name="Widget.Nucleo.Texto" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/Texto.Nucleo.Cuerpo</item>
+    </style>
+
+    <style name="Texto.Nucleo.Cuerpo.Negrita">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Texto.Nucleo.Secundario" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">@font/plex</item>
+        <item name="fontFamily">@font/plex</item>
+        <item name="android:textSize">@dimen/texto_secundario</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <style name="Texto.Nucleo.Etiqueta" parent="Texto.Nucleo.Secundario">
+        <item name="android:fontFamily">@font/ibm_plex_sans_medium</item>
+        <item name="fontFamily">@font/ibm_plex_sans_medium</item>
+        <item name="android:textColor">@color/texto_etiqueta</item>
+    </style>
+
+    <style name="Texto.Nucleo.Precio" parent="Texto.Nucleo.Cuerpo">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/acento_comprador</item>
+    </style>
+
+    <style name="Texto.Nucleo.Boton" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">@font/plex</item>
+        <item name="fontFamily">@font/plex</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Píldora de estado (Pendiente, Enviado, Activo...). El color se asigna desde el código. -->
+    <style name="Widget.Nucleo.Pildora" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_pildora</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">@dimen/texto_pequeno</item>
+        <item name="android:fontFamily">@font/plex</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Etiqueta del rol en la parte superior de cada pantalla principal. -->
+    <style name="Widget.Nucleo.Pildora.Rol">
+        <item name="android:backgroundTint">?attr/colorRolSuave</item>
+        <item name="android:textColor">?attr/colorRol</item>
+    </style>
+
+    <!-- ===================== Botones ===================== -->
+    <style name="Widget.Nucleo.Boton" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/alto_boton</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/primario</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="iconTint">@color/blanco</item>
+        <item name="cornerRadius">@dimen/radio_m</item>
+        <item name="android:textAppearance">@style/Texto.Nucleo.Boton</item>
+    </style>
+
+    <style name="Widget.Nucleo.Boton.Pequeno">
+        <item name="android:minHeight">@dimen/alto_boton_pequeno</item>
+        <item name="cornerRadius">@dimen/radio_s</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+    </style>
+
+    <style name="Widget.Nucleo.Boton.Contorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/alto_boton</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/superficie</item>
+        <item name="strokeColor">@color/borde_fuerte</item>
+        <item name="strokeWidth">@dimen/borde_tarjeta</item>
+        <item name="android:textColor">@color/texto</item>
+        <item name="iconTint">@color/primario_claro</item>
+        <item name="cornerRadius">@dimen/radio_m</item>
+        <item name="android:textAppearance">@style/Texto.Nucleo.Boton</item>
+    </style>
+
+    <style name="Widget.Nucleo.Boton.Contorno.Pequeno">
+        <item name="android:minHeight">@dimen/alto_boton_pequeno</item>
+        <item name="cornerRadius">@dimen/radio_s</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+    </style>
+
+    <!-- Botón de un grupo para alternar opciones (MaterialButtonToggleGroup). -->
+    <style name="Widget.Nucleo.Boton.Alternar" parent="Widget.Nucleo.Boton.Contorno.Pequeno">
+        <item name="backgroundTint">@color/alternar_fondo</item>
+        <item name="android:textColor">@color/alternar_texto</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+    </style>
+
+    <style name="Widget.Nucleo.Boton.Peligro" parent="Widget.Nucleo.Boton.Contorno.Pequeno">
+        <item name="strokeColor">@color/error</item>
+        <item name="android:textColor">@color/error</item>
+        <item name="iconTint">@color/error</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="Widget.Nucleo.Boton.Texto" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/primario_claro</item>
+        <item name="android:textAppearance">@style/Texto.Nucleo.Boton</item>
+        <item name="android:textSize">14sp</item>
+        <item name="iconTint">@color/primario_claro</item>
+    </style>
+
+    <!-- Botón cuadrado solo con ícono (volver, editar, eliminar...). -->
+    <style name="Widget.Nucleo.BotonIcono" parent="Widget.Material3.Button.IconButton.Outlined">
+        <item name="android:minWidth">@dimen/tamano_toque</item>
+        <item name="android:minHeight">@dimen/tamano_toque</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/superficie</item>
+        <item name="strokeColor">@color/borde</item>
+        <item name="iconTint">@color/texto</item>
+        <item name="iconSize">@dimen/icono_m</item>
+        <item name="cornerRadius">@dimen/radio_m</item>
+    </style>
+
+    <style name="Widget.Nucleo.BotonIcono.Plano" parent="Widget.Material3.Button.IconButton">
+        <item name="android:minWidth">@dimen/tamano_toque</item>
+        <item name="android:minHeight">@dimen/tamano_toque</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="iconTint">@color/texto_etiqueta</item>
+        <item name="iconSize">@dimen/icono_s</item>
+    </style>
+
+    <style name="Widget.Nucleo.BotonIcono.Primario" parent="Widget.Nucleo.BotonIcono">
+        <item name="backgroundTint">@color/primario</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="iconTint">@color/blanco</item>
+    </style>
+
+    <!-- ===================== Campos de texto ===================== -->
+    <style name="Widget.Nucleo.CampoTexto" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/superficie</item>
+        <item name="boxStrokeColor">@color/campo_borde</item>
+        <item name="boxStrokeErrorColor">@color/error</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radio_m</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radio_m</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radio_m</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radio_m</item>
+        <item name="hintTextColor">@color/primario_claro</item>
+        <item name="android:textColorHint">@color/texto_secundario</item>
+        <item name="startIconTint">@color/texto_secundario</item>
+        <item name="endIconTint">@color/texto_secundario</item>
+        <item name="errorTextColor">@color/error</item>
+        <item name="errorIconTint">@color/error</item>
+    </style>
+
+    <style name="Widget.Nucleo.CampoTexto.Lista" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/superficie</item>
+        <item name="boxStrokeColor">@color/campo_borde</item>
+        <item name="boxCornerRadiusTopStart">@dimen/radio_m</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radio_m</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radio_m</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radio_m</item>
+        <item name="hintTextColor">@color/primario_claro</item>
+        <item name="android:textColorHint">@color/texto_secundario</item>
+        <item name="endIconTint">@color/texto_secundario</item>
+    </style>
+
+    <!-- ===================== Tarjetas y listas ===================== -->
+    <style name="Widget.Nucleo.Tarjeta" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/superficie</item>
+        <item name="strokeColor">@color/borde</item>
+        <item name="strokeWidth">@dimen/borde_tarjeta</item>
+        <item name="cardCornerRadius">@dimen/radio_l</item>
+        <item name="cardElevation">0dp</item>
+        <item name="rippleColor">@color/primario_suave</item>
+    </style>
+
+    <!-- Tarjeta que se puede marcar (elegir rol, comercio o método de pago). -->
+    <style name="Widget.Nucleo.Tarjeta.Seleccionable">
+        <item name="strokeColor">@color/tarjeta_seleccion_borde</item>
+        <item name="android:checkable">true</item>
+        <item name="checkedIconTint">@color/primario_claro</item>
+        <item name="checkedIconGravity">TOP_END</item>
+        <item name="checkedIconMargin">10dp</item>
+    </style>
+
+    <style name="Widget.Nucleo.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_fondo</item>
+        <item name="chipStrokeColor">@color/chip_borde</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_texto</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipCornerRadius">20dp</item>
+        <item name="android:textAppearance">@style/Texto.Nucleo.Secundario</item>
+        <item name="chipMinHeight">36dp</item>
+    </style>
+
+    <!-- ===================== Navegación y otros ===================== -->
+    <style name="Widget.Nucleo.NavegacionInferior" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/fondo_barra</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Nucleo.NavegacionInferior.Indicador</item>
+        <item name="itemTextAppearanceActive">@style/Texto.Nucleo.Navegacion</item>
+        <item name="itemTextAppearanceInactive">@style/Texto.Nucleo.Navegacion</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.Nucleo.NavegacionInferior.Indicador" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">?attr/colorRolSuave</item>
+    </style>
+
+    <style name="Texto.Nucleo.Navegacion" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">@font/plex</item>
+        <item name="fontFamily">@font/plex</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Widget.Nucleo.Interruptor" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/interruptor_pulgar</item>
+        <item name="trackTint">@color/interruptor_pista</item>
+        <item name="trackDecorationTint">@color/borde_fuerte</item>
+    </style>
+
+    <style name="Widget.Nucleo.Casilla" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/casilla</item>
+    </style>
+
+    <style name="Widget.Nucleo.Pestanas" parent="Widget.Material3.TabLayout">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="tabIndicatorColor">?attr/colorRol</item>
+        <item name="tabSelectedTextColor">?attr/colorRol</item>
+        <item name="tabTextColor">@color/texto_secundario</item>
+        <item name="tabRippleColor">@color/primario_suave</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabTextAppearance">@style/Texto.Nucleo.Boton</item>
+    </style>
+
+    <style name="Widget.Nucleo.Separador" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/borde</item>
+    </style>
+
+    <style name="Widget.Nucleo.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="backgroundTint">@color/superficie_alta</item>
+    </style>
+
+    <style name="Widget.Nucleo.Snackbar.Texto" parent="Widget.Material3.Snackbar.TextView">
+        <item name="android:textColor">@color/texto</item>
+        <item name="android:fontFamily">@font/plex</item>
+    </style>
+
+    <style name="Widget.Nucleo.Snackbar.Boton" parent="Widget.Material3.Button.TextButton.Snackbar">
+        <item name="android:textColor">@color/primario_claro</item>
+    </style>
+
+    <style name="Dialogo.Nucleo.Titulo" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textAppearance">@style/Texto.Nucleo.Subtitulo</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="Dialogo.Nucleo.Cuerpo" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textAppearance">@style/Texto.Nucleo.Cuerpo</item>
+        <item name="android:textColor">@color/texto_etiqueta</item>
+    </style>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Atributos propios de los temas -->
+<resources>
+    <attr name="colorRol" format="color" />
+    <attr name="colorRolSuave" format="color" />
+</resources>

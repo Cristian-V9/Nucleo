@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Caja de aviso informativo; el color se ajusta con backgroundTint. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/blanco" />
+    <corners android:radius="@dimen/radio_m" />
+</shape>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Borde de las tarjetas seleccionables (elección de rol, comercio, método de pago). -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/primario_claro" android:state_checked="true" />
+    <item android:color="@color/borde" />
+</selector>

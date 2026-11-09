@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paleta de Núcleo: tema oscuro con azul como color de acción principal. -->
+<resources>
+    <!-- usado en fondos y superficies -->
+    <color name="fondo">#0B1220</color>
+    <color name="fondo_barra">#0F1729</color>
+    <color name="superficie">#121B2E</color>
+    <color name="superficie_alta">#1A2540</color>
+    <color name="borde">#22304D</color>
+    <color name="borde_fuerte">#2A3A5C</color>
+
+    <!-- sirve para el texto -->
+    <color name="texto">#E6ECF7</color>
+    <color name="texto_secundario">#8E9BB5</color>
+    <color name="texto_sutil">#6F7C98</color>
+    <color name="texto_etiqueta">#B9C4DA</color>
+    <color name="blanco">#FFFFFF</color>
+
+    <!-- Acciones-->
+    <color name="primario">#2563EB</color>
+    <color name="primario_claro">#6EA8FF</color>
+    <color name="primario_suave">#262563EB</color>
+
+    <!-- Acentos por rol -->
+    <color name="acento_comprador">#8CB6FF</color>
+    <color name="acento_comprador_suave">#264C8DFF</color>
+    <color name="acento_vendedor">#6FDCEB</color>
+    <color name="acento_vendedor_suave">#242BC4DB</color>
+    <color name="acento_admin">#B8ADFF</color>
+    <color name="acento_admin_suave">#269B8CFF</color>
+
+    <!-- Estados -->
+    <color name="exito">#5EE0AE</color>
+    <color name="exito_suave">#2434D399</color>
+    <color name="advertencia">#F5C26B</color>
+    <color name="advertencia_suave">#26F5B544</color>
+    <color name="error">#F87171</color>
+    <color name="error_suave">#24F87171</color>
+    <color name="icono_producto">#4C6A9E</color>
+</resources>

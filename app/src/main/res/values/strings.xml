@@ -1,0 +1,311 @@
+<resources>
+    <string name="app_name">Núcleo</string>
+    <string name="app_lema">Componentes de PC de comercios verificados en Bogotá</string>
+
+    <!-- Generales -->
+    <string name="volver">Volver</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="cerrar_sesion_pregunta">¿Quieres cerrar tu sesión?</string>
+    <string name="campo_obligatorio">Este campo es obligatorio</string>
+    <string name="correo_invalido">Escribe un correo válido</string>
+    <string name="proxima_version">Esta función se conectará en la siguiente versión</string>
+    <string name="ver_todo">Ver todo</string>
+    <string name="sin_resultados">No encontramos resultados</string>
+    <string name="cargando">Cargando…</string>
+
+    <!-- Roles -->
+    <string name="rol_comprador">Comprador</string>
+    <string name="rol_vendedor">Vendedor</string>
+    <string name="rol_admin">Administrador</string>
+
+    <!-- Navegación inferior -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_catalogo">Catálogo</string>
+    <string name="nav_carrito">Carrito</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_productos">Productos</string>
+    <string name="nav_pedidos">Pedidos</string>
+    <string name="nav_panel">Panel</string>
+    <string name="nav_usuarios">Usuarios</string>
+    <string name="nav_ventas">Ventas</string>
+
+    <!-- Inicio de sesión -->
+    <string name="correo">Correo electrónico</string>
+    <string name="clave">Contraseña</string>
+    <string name="olvide_clave">¿Olvidaste tu contraseña?</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="o_continua_con">o continúa con</string>
+    <string name="ingresar_huella">Ingresar con huella</string>
+    <string name="sin_cuenta">¿No tienes cuenta?</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="cuentas_prueba">Cuentas de prueba (clave 12345678):\ncomprador@nucleo.co · vendedor@nucleo.co · admin@nucleo.co</string>
+    <string name="credenciales_incorrectas">Correo o contraseña incorrectos</string>
+    <string name="cuenta_inactiva">Esta cuenta está desactivada. Comunícate con el administrador.</string>
+    <string name="cuenta_pendiente">Tu comercio está en revisión. Podrás ingresar cuando el administrador lo apruebe.</string>
+    <string name="cuenta_rechazada">La solicitud de tu comercio fue rechazada. Revisa tu correo para conocer el motivo.</string>
+    <string name="huella_titulo">Ingresar a Núcleo</string>
+    <string name="huella_subtitulo">Usa tu huella para continuar como %1$s</string>
+    <string name="huella_usar_clave">Usar contraseña</string>
+    <string name="huella_sin_usuario">Primero ingresa con tu contraseña; después podrás usar la huella.</string>
+    <string name="huella_no_disponible">Este dispositivo no tiene una huella registrada.</string>
+    <string name="huella_desactivada">Activaste el ingreso solo con contraseña. Puedes cambiarlo en tu perfil.</string>
+
+    <!-- Registro -->
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_pregunta_rol">¿Cómo usarás Núcleo?</string>
+    <string name="registro_comprador_desc">Busca y compra componentes con envío a domicilio</string>
+    <string name="registro_vendedor_desc">Vende tu inventario. Requiere RUT y matrícula mercantil</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="celular">Celular</string>
+    <string name="clave_minimo">Mínimo 8 caracteres</string>
+    <string name="clave_corta">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="acepto_politica">Acepto los términos y condiciones y la política de tratamiento de datos personales (Ley 1581 de 2012).</string>
+    <string name="politica_obligatoria">Debes aceptar la política de datos para continuar</string>
+    <string name="correo_registrado">Ya existe una cuenta con este correo</string>
+    <string name="continuar">Continuar</string>
+    <string name="bienvenida">¡Bienvenido a Núcleo, %1$s!</string>
+
+    <!-- Registro de vendedor -->
+    <string name="registro_comercio_titulo">Registrar comercio</string>
+    <string name="registro_comercio_paso">Paso 2 de 2 · Datos legales del comercio</string>
+    <string name="razon_social">Razón social</string>
+    <string name="nit">NIT</string>
+    <string name="telefono">Teléfono</string>
+    <string name="direccion_local">Dirección del local</string>
+    <string name="documentos_legales">Documentos legales</string>
+    <string name="rut">RUT (DIAN)</string>
+    <string name="matricula">Matrícula mercantil</string>
+    <string name="matricula_desc">Certificado de la Cámara de Comercio</string>
+    <string name="tomar_foto">Tomar foto</string>
+    <string name="subir_pdf">Subir PDF</string>
+    <string name="documento_cargado">%1$s · Cargado</string>
+    <string name="documento_sin_cargar">Sin cargar</string>
+    <string name="documentos_faltantes">Adjunta el RUT y la matrícula mercantil</string>
+    <string name="aviso_revision">Un administrador revisará tus documentos. Podrás publicar productos cuando tu comercio sea aprobado.</string>
+    <string name="enviar_solicitud">Enviar solicitud</string>
+    <string name="solicitud_enviada_titulo">Solicitud enviada</string>
+    <string name="solicitud_enviada_mensaje">Revisaremos tus documentos y te avisaremos por correo cuando tu comercio sea aprobado.</string>
+
+    <!-- Recuperar contraseña -->
+    <string name="recuperar_titulo">Recuperar contraseña</string>
+    <string name="recuperar_mensaje">Escribe el correo con el que te registraste y te enviaremos un enlace para crear una nueva contraseña.</string>
+    <string name="enviar_enlace">Enviar enlace</string>
+    <string name="recuperar_enviado_titulo">Revisa tu correo</string>
+    <string name="recuperar_enviado_mensaje">Si %1$s está registrado, recibirás un enlace para restablecer tu contraseña. El enlace vence en 1 hora.</string>
+    <string name="volver_inicio_sesion">Volver al inicio de sesión</string>
+
+    <!-- Comprador: inicio y catálogo -->
+    <string name="hola">Hola, %1$s</string>
+    <string name="inicio_pregunta">¿Qué componente\nbuscas hoy?</string>
+    <string name="buscar_hint">RTX 4060, Ryzen 5, DDR5…</string>
+    <string name="entregar_en">Entregar en: %1$s</string>
+    <string name="categorias">Categorías</string>
+    <string name="mas_buscados">Más buscados</string>
+    <string name="catalogo_titulo">Catálogo</string>
+    <string name="todos">Todos</string>
+    <string name="menor_precio">Menor precio</string>
+    <string name="mayor_precio">Mayor precio</string>
+    <string name="desde">Desde %1$s</string>
+    <string name="resultados">%1$d productos</string>
+    <plurals name="productos">
+        <item quantity="one">%d producto</item>
+        <item quantity="other">%d productos</item>
+    </plurals>
+    <plurals name="publicaciones_ocultas">
+        <item quantity="one">%d publicación oculta</item>
+        <item quantity="other">%d publicaciones ocultas</item>
+    </plurals>
+    <plurals name="comercios_por_verificar">
+        <item quantity="one">%d comercio por verificar</item>
+        <item quantity="other">%d comercios por verificar</item>
+    </plurals>
+    <plurals name="comercios">
+        <item quantity="one">%d comercio</item>
+        <item quantity="other">%d comercios</item>
+    </plurals>
+
+    <!-- Comprador: detalle -->
+    <string name="detalle_titulo">Detalle del producto</string>
+    <string name="nuevo_sellado">%1$s · Nuevo, sellado</string>
+    <string name="ficha_tecnica">Ficha técnica</string>
+    <string name="disponible_en">Disponible en %1$s</string>
+    <string name="envio_stock">Envío %1$s · %2$d en stock</string>
+    <string name="comercio_verificado">Comercio verificado</string>
+    <string name="agregar_carrito">Agregar al carrito</string>
+    <string name="agregado_carrito">Producto agregado al carrito</string>
+    <string name="ver_carrito">Ver carrito</string>
+    <string name="carrito_otro_comercio_titulo">¿Cambiar de comercio?</string>
+    <string name="carrito_otro_comercio_mensaje">Tu carrito tiene productos de %1$s. Cada pedido es de un solo comercio, así que vaciaremos el carrito para agregar este producto.</string>
+    <string name="vaciar_y_agregar">Vaciar y agregar</string>
+
+    <!-- Comprador: carrito -->
+    <string name="carrito_titulo">Carrito</string>
+    <string name="pedido_a">Pedido a</string>
+    <string name="aviso_un_comercio">El carrito admite productos de un solo comercio a la vez. Así tu pedido tiene un único envío.</string>
+    <string name="subtotal">Subtotal (%1$s)</string>
+    <string name="envio">Envío (lo define el comercio)</string>
+    <string name="total">Total</string>
+    <string name="continuar_pago">Continuar al pago</string>
+    <string name="carrito_vacio">Tu carrito está vacío</string>
+    <string name="carrito_vacio_desc">Explora el catálogo y compara precios entre comercios.</string>
+    <string name="ir_catalogo">Ir al catálogo</string>
+    <string name="disminuir">Disminuir cantidad</string>
+    <string name="aumentar">Aumentar cantidad</string>
+    <string name="quitar_producto">Quitar del carrito</string>
+
+    <!-- Comprador: pago -->
+    <string name="pago_titulo">Confirmar pedido</string>
+    <string name="direccion_entrega">Dirección de entrega</string>
+    <string name="direccion">Dirección</string>
+    <string name="direccion_ejemplo">Cra. 15 # 85-20, Apto 402, Bogotá</string>
+    <string name="usar_ubicacion">Usar mi ubicación actual</string>
+    <string name="metodo_pago">Método de pago</string>
+    <string name="mercado_pago">Mercado Pago</string>
+    <string name="mercado_pago_desc">Tarjeta, PSE o efectivo · Entorno de pruebas</string>
+    <string name="aviso_pasarela">Serás redirigido a la pasarela segura. Núcleo no almacena los datos de tu tarjeta.</string>
+    <string name="confirmar_huella">Confirmar el pago con huella</string>
+    <string name="resumen_pedido">%1$s + envío · %2$s</string>
+    <string name="pagar">Pagar %1$s</string>
+    <string name="pago_huella_titulo">Confirmar pago</string>
+    <string name="pago_huella_subtitulo">Autoriza el pago de %1$s</string>
+    <string name="pago_aprobado_titulo">¡Pago aprobado!</string>
+    <string name="pago_aprobado_mensaje">Tu pedido %1$s quedó registrado. %2$s lo despachará a %3$s.\n\n(Pago simulado en entorno de pruebas.)</string>
+    <string name="ver_mis_pedidos">Ver mis pedidos</string>
+
+    <!-- Perfil -->
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="cambiar_foto">Cambiar foto de perfil</string>
+    <string name="ingreso_huella">Ingreso con huella</string>
+    <string name="privacidad">Privacidad y datos personales</string>
+    <string name="mis_pedidos">Mis pedidos</string>
+    <string name="sin_pedidos">Todavía no tienes pedidos</string>
+    <string name="eliminar_cuenta">Eliminar mi cuenta</string>
+    <string name="eliminar_cuenta_mensaje">Tus datos personales se eliminarán y no podrás volver a ingresar con esta cuenta. Escribe tu contraseña para confirmar.</string>
+    <string name="clave_incorrecta">La contraseña no coincide</string>
+    <string name="perfil_actualizado">Perfil actualizado</string>
+    <string name="mi_comercio">Mi comercio</string>
+    <string name="envio_comercio">Envío: %1$s · %2$s</string>
+    <string name="politica_texto">Núcleo trata tus datos personales (nombre, correo, celular y dirección de entrega) solo para gestionar tu cuenta y tus pedidos, conforme a la Ley 1581 de 2012 y el Decreto 1377 de 2013.\n\nPuedes consultar, actualizar o eliminar tu información desde este perfil. La huella la valida tu teléfono y Núcleo nunca la almacena.</string>
+    <string name="pedido_resumen">%1$s · %2$s · %3$s</string>
+    <string name="pedido_titulo">#%1$s · %2$s</string>
+
+    <!-- Vendedor: productos -->
+    <string name="mis_productos">Mis productos</string>
+    <string name="nuevo_producto">Nuevo producto</string>
+    <string name="editar_producto">Editar producto</string>
+    <string name="buscar_inventario">Buscar en mi inventario</string>
+    <string name="activos">Activos</string>
+    <string name="sin_stock">Sin stock</string>
+    <string name="ocultos">Ocultos</string>
+    <string name="precio_stock">%1$s · Stock: %2$d</string>
+    <string name="precio_sin_stock">%1$s · Sin stock</string>
+    <string name="oculto_por_admin">Oculto por el administrador: %1$s</string>
+    <string name="eliminar_producto_titulo">¿Eliminar producto?</string>
+    <string name="eliminar_producto_mensaje">%1$s dejará de mostrarse en el catálogo. Los pedidos anteriores se conservan.</string>
+    <string name="producto_eliminado">Producto eliminado</string>
+    <string name="producto_guardado">Producto guardado</string>
+    <string name="sin_productos">No tienes productos en esta lista</string>
+
+    <!-- Vendedor: formulario de producto -->
+    <string name="fotos_producto">Fotos del producto (máximo 3)</string>
+    <string name="galeria">Galería</string>
+    <string name="nombre_producto">Nombre del producto</string>
+    <string name="categoria">Categoría</string>
+    <string name="marca">Marca</string>
+    <string name="referencia">Referencia del fabricante</string>
+    <string name="precio_cop">Precio (COP)</string>
+    <string name="stock">Unidades en stock</string>
+    <string name="ficha_tecnica_hint">Ficha técnica (una por línea)</string>
+    <string name="ficha_tecnica_ayuda">Formato Característica: valor. Ejemplo: Memoria: 8 GB GDDR6</string>
+    <string name="precio_invalido">El precio debe ser mayor que 0</string>
+    <string name="stock_invalido">El stock debe ser 0 o más</string>
+    <string name="aviso_productos_nuevos">Solo se publican productos nuevos y sellados. El administrador puede ocultar publicaciones que incumplan las políticas.</string>
+    <string name="guardar_publicar">Guardar y publicar</string>
+    <string name="maximo_fotos">Puedes adjuntar hasta 3 fotos</string>
+    <string name="quitar_foto">Quitar foto</string>
+
+    <!-- Vendedor: pedidos -->
+    <string name="pedidos_recibidos">Pedidos recibidos</string>
+    <string name="pendientes">Pendientes</string>
+    <string name="enviados">Enviados</string>
+    <string name="entregados">Entregados</string>
+    <string name="marcar_enviado">Marcar como enviado</string>
+    <string name="marcar_entregado">Marcar como entregado</string>
+    <string name="pedido_actualizado">Pedido %1$s: %2$s</string>
+    <string name="sin_pedidos_estado">No hay pedidos en este estado</string>
+
+    <!-- Administrador -->
+    <string name="panel_general">Panel general</string>
+    <string name="panel_resumen">Resumen de la plataforma</string>
+    <string name="comercios_activos">Comercios activos</string>
+    <string name="solicitudes_pendientes">Solicitudes pendientes</string>
+    <string name="usuarios_registrados">Usuarios registrados</string>
+    <string name="ventas_mes">Ventas del mes</string>
+    <string name="requiere_atencion">Requiere atención</string>
+        <string name="revisar_documentos">Revisar RUT y matrícula mercantil</string>
+        <string name="revisar_moderacion">Revisar productos moderados</string>
+    <string name="pedidos_recientes">Pedidos recientes</string>
+
+    <string name="usuarios_titulo">Usuarios</string>
+    <string name="nuevo">Nuevo</string>
+    <string name="buscar_usuario">Nombre o correo</string>
+    <string name="compradores">Compradores</string>
+    <string name="vendedores">Vendedores</string>
+    <string name="admins">Admins</string>
+    <string name="rol_estado">%1$s · %2$s</string>
+    <string name="nuevo_usuario">Nuevo usuario</string>
+    <string name="editar_usuario">Editar usuario</string>
+    <string name="rol">Rol</string>
+    <string name="cuenta_activa">Cuenta activa</string>
+    <string name="cuenta_activa_desc">Una cuenta inactiva no puede iniciar sesión</string>
+    <string name="aviso_clave_temporal">El usuario recibirá un correo para crear su contraseña.</string>
+    <string name="usuario_guardado">Usuario guardado</string>
+    <string name="eliminar_usuario_titulo">¿Eliminar usuario?</string>
+    <string name="eliminar_usuario_mensaje">La cuenta de %1$s quedará inactiva (eliminación lógica) y se conservará su historial.</string>
+    <string name="usuario_eliminado">Usuario eliminado</string>
+    <string name="no_eliminarse">No puedes eliminar tu propia cuenta</string>
+
+    <string name="productos_titulo">Productos</string>
+    <string name="todas">Todas</string>
+    <string name="visibles">Visibles</string>
+    <string name="ocultas">Ocultas</string>
+    <string name="ocultar">Ocultar</string>
+    <string name="mostrar">Mostrar</string>
+    <string name="ocultar_titulo">Ocultar publicación</string>
+    <string name="motivo">Motivo</string>
+    <string name="motivo_obligatorio">Escribe el motivo</string>
+    <string name="motivo_hint">Ej.: precio inconsistente, producto usado…</string>
+    <string name="publicacion_oculta">Publicación oculta</string>
+    <string name="publicacion_visible">Publicación visible de nuevo</string>
+    <string name="producto_vendedor">%1$s · %2$s · Stock: %3$d</string>
+
+    <string name="solicitudes_titulo">Solicitudes de comercios</string>
+    <string name="solicitado_el">Solicitado el %1$s</string>
+    <string name="ver">Ver</string>
+    <string name="aprobar">Aprobar</string>
+    <string name="rechazar">Rechazar</string>
+    <string name="rechazar_titulo">Rechazar solicitud</string>
+    <string name="rechazar_mensaje">El motivo se enviará al comercio.</string>
+    <string name="solicitud_aprobada">%1$s fue aprobado</string>
+    <string name="solicitud_rechazada">Solicitud rechazada</string>
+    <string name="sin_solicitudes">No hay solicitudes pendientes</string>
+    <string name="documento_rut">RUT · rut.pdf</string>
+    <string name="documento_matricula">Matrícula mercantil · matricula.pdf</string>
+
+    <string name="reporte_ventas">Reporte de ventas</string>
+    <string name="ultimos_meses">Últimos 6 meses</string>
+    <string name="total_vendido">Total vendido</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="ticket_promedio">Valor promedio por pedido</string>
+    <string name="ventas_por_mes">Ventas por mes</string>
+    <string name="ventas_por_comercio">Ventas por comercio</string>
+    <string name="mas_vendidos">Productos más vendidos</string>
+    <string name="unidades">%1$d unidades vendidas</string>
+    <string name="n_pedidos">%1$d pedidos</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Tema base de la aplicación. nos permite heredar de Material 3 oscuro y reemplaza los colores,
+        la tipografía y la forma de los componentes que vienen por defecto.
+    -->
+    <style name="Theme.Nucleo" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores de Material 3 -->
+        <item name="colorPrimary">@color/primario</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorPrimaryContainer">@color/primario_suave</item>
+        <item name="colorOnPrimaryContainer">@color/primario_claro</item>
+        <item name="colorSecondary">@color/primario_claro</item>
+        <item name="colorOnSecondary">@color/fondo</item>
+        <item name="colorSecondaryContainer">@color/superficie_alta</item>
+        <item name="colorOnSecondaryContainer">@color/texto</item>
+        <item name="android:colorBackground">@color/fondo</item>
+        <item name="colorOnBackground">@color/texto</item>
+        <item name="colorSurface">@color/superficie</item>
+        <item name="colorOnSurface">@color/texto</item>
+        <item name="colorOnSurfaceVariant">@color/texto_secundario</item>
+        <item name="colorSurfaceContainer">@color/superficie</item>
+        <item name="colorSurfaceContainerHigh">@color/superficie_alta</item>
+        <item name="colorSurfaceContainerHighest">@color/superficie_alta</item>
+        <item name="colorOutline">@color/borde_fuerte</item>
+        <item name="colorOutlineVariant">@color/borde</item>
+        <item name="colorError">@color/error</item>
+
+        <!-- Color de acento del rol (atributo propio, ver attrs.xml) -->
+        <item name="colorRol">@color/acento_comprador</item>
+        <item name="colorRolSuave">@color/acento_comprador_suave</item>
+
+        <!-- Barras del sistema -->
+        <item name="android:statusBarColor">@color/fondo</item>
+        <item name="android:navigationBarColor">@color/fondo_barra</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/fondo</item>
+
+        <!-- Tipografía: estilos de texto por defecto (no se fija fontFamily en el tema
+             para que cada textAppearance pueda usar su propia fuente). -->
+        <item name="android:textViewStyle">@style/Widget.Nucleo.Texto</item>
+        <item name="textAppearanceBodyLarge">@style/Texto.Nucleo.Cuerpo</item>
+        <item name="textAppearanceBodyMedium">@style/Texto.Nucleo.Secundario</item>
+        <item name="textAppearanceTitleMedium">@style/Texto.Nucleo.Subtitulo</item>
+        <item name="textAppearanceLabelLarge">@style/Texto.Nucleo.Boton</item>
+
+        <!-- Formas -->
+        <item name="shapeAppearanceCornerSmall">@style/Forma.Nucleo.Pequena</item>
+        <item name="shapeAppearanceCornerMedium">@style/Forma.Nucleo.Mediana</item>
+        <item name="shapeAppearanceCornerLarge">@style/Forma.Nucleo.Grande</item>
+
+        <!-- Estilos por defecto de los componentes -->
+        <item name="materialButtonStyle">@style/Widget.Nucleo.Boton</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Nucleo.Boton.Contorno</item>
+        <item name="borderlessButtonStyle">@style/Widget.Nucleo.Boton.Texto</item>
+        <item name="textInputStyle">@style/Widget.Nucleo.CampoTexto</item>
+        <item name="materialCardViewStyle">@style/Widget.Nucleo.Tarjeta</item>
+        <item name="chipStyle">@style/Widget.Nucleo.Chip</item>
+        <item name="bottomNavigationStyle">@style/Widget.Nucleo.NavegacionInferior</item>
+        <item name="materialSwitchStyle">@style/Widget.Nucleo.Interruptor</item>
+        <item name="checkboxStyle">@style/Widget.Nucleo.Casilla</item>
+        <item name="tabStyle">@style/Widget.Nucleo.Pestanas</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Nucleo.Dialogo</item>
+        <item name="snackbarStyle">@style/Widget.Nucleo.Snackbar</item>
+        <item name="snackbarTextViewStyle">@style/Widget.Nucleo.Snackbar.Texto</item>
+        <item name="snackbarButtonStyle">@style/Widget.Nucleo.Snackbar.Boton</item>
+    </style>
+
+    <!-- Variantes del tema por rol: solo cambian el color de acento. -->
+    <style name="Theme.Nucleo.Comprador">
+        <item name="colorRol">@color/acento_comprador</item>
+        <item name="colorRolSuave">@color/acento_comprador_suave</item>
+    </style>
+
+    <style name="Theme.Nucleo.Vendedor">
+        <item name="colorRol">@color/acento_vendedor</item>
+        <item name="colorRolSuave">@color/acento_vendedor_suave</item>
+    </style>
+
+    <style name="Theme.Nucleo.Admin">
+        <item name="colorRol">@color/acento_admin</item>
+        <item name="colorRolSuave">@color/acento_admin_suave</item>
+    </style>
+
+    <!-- Tema de la pantalla de bienvenida del sistema (API Splash Screen). -->
+    <style name="Theme.Nucleo.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/fondo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.Nucleo</item>
+    </style>
+
+    <!-- Diálogos con las superficies y colores de la app. -->
+    <style name="ThemeOverlay.Nucleo.Dialogo" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/superficie_alta</item>
+        <item name="colorSurfaceContainerHigh">@color/superficie_alta</item>
+        <item name="colorPrimary">@color/primario_claro</item>
+        <item name="shapeAppearanceOverlay">@style/Forma.Nucleo.Grande</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/Dialogo.Nucleo.Titulo</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Dialogo.Nucleo.Cuerpo</item>
+    </style>
+
+</resources>
