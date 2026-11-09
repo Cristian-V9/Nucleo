@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Panel de productos del vendedor: listar, buscar, crear, editar y eliminar (RF-06). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/encabezado"
+        layout="@layout/include_encabezado_rol" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/campoBuscar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margen_pantalla"
+        app:endIconMode="clear_text"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_buscar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/buscar_inventario"
+            android:inputType="text"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/grupoFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margen_pantalla"
+        android:layout_marginTop="@dimen/espacio_s"
+        app:checkedChip="@id/chipTodos"
+        app:selectionRequired="true"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todos" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipActivos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activos" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSinStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sin_stock" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipOcultos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ocultos" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaProductos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/margen_pantalla"
+            android:paddingTop="@dimen/espacio_m"
+            android:paddingBottom="88dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/textoVacio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sin_productos"
+            android:textAppearance="@style/Texto.Nucleo.Secundario"
+            android:visibility="gone" />
+
+        <!-- Botón flotante para crear un producto -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/botonNuevo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margen_pantalla"
+            android:text="@string/nuevo_producto"
+            android:textAppearance="@style/Texto.Nucleo.Boton"
+            android:textColor="@color/blanco"
+            app:backgroundTint="@color/primario"
+            app:icon="@drawable/ic_agregar"
+            app:iconTint="@color/blanco"
+            app:shapeAppearanceOverlay="@style/Forma.Nucleo.Grande" />
+    </FrameLayout>
+</LinearLayout>

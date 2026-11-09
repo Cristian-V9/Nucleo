@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pedido recibido por el vendedor, con su progreso y el botón para avanzar el estado (RF-09). -->
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/espacio_m">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espacio_l">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/numero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/Texto.Nucleo.Cuerpo.Negrita" />
+
+            <TextView
+                android:id="@+id/estado"
+                style="@style/Widget.Nucleo.Pildora" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comprador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_s"
+            android:textAppearance="@style/Texto.Nucleo.Cuerpo"
+            android:textColor="@color/texto_etiqueta"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/productos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textAppearance="@style/Texto.Nucleo.Secundario"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_s"
+            android:drawablePadding="6dp"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/Texto.Nucleo.Secundario"
+            android:textColor="@color/texto_etiqueta"
+            app:drawableStartCompat="@drawable/ic_ubicacion"
+            app:drawableTint="@color/primario_claro" />
+
+        <!-- Progreso: Pendiente → Enviado → Entregado -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:max="2"
+            app:indicatorColor="@color/acento_vendedor"
+            app:trackColor="@color/superficie_alta"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_xs"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pendientes"
+                android:textAppearance="@style/Texto.Nucleo.Secundario"
+                android:textSize="@dimen/texto_pequeno" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/enviados"
+                android:textAppearance="@style/Texto.Nucleo.Secundario"
+                android:textSize="@dimen/texto_pequeno" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/entregados"
+                android:textAppearance="@style/Texto.Nucleo.Secundario"
+                android:textSize="@dimen/texto_pequeno" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_m"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="@style/Texto.Nucleo.Subtitulo"
+                android:textSize="17sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botonAvanzar"
+                style="@style/Widget.Nucleo.Boton.Pequeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
