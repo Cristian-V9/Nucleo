@@ -1,80 +1,91 @@
-# Núcleo · Tienda virtual Android
+[English](README.md) | [Español](README.es.md)
 
-Aplicación móvil nativa para Android que funciona como *marketplace* de componentes para computadores de escritorio (procesadores, tarjetas gráficas, memoria RAM, almacenamiento, tarjetas madre y fuentes de poder), vendidos por comercios legalmente constituidos de Bogotá.
+# Nucleo · Android marketplace
 
-Esta versión corresponde al **frontend completo** de la aplicación: todas las pantallas, la navegación por rol y los recursos visuales. Los datos son de ejemplo y se guardan en memoria; la conexión con Firebase y Mercado Pago queda para la siguiente versión.
+Native Android app that works as a marketplace for desktop computer components (processors, graphics cards, RAM, storage, motherboards and power supplies), sold by legally registered retailers in Bogota.
 
-## Descargar y probar
+This version is the complete frontend: every screen, role-based navigation and visual resources. Data is sample data kept in memory; the Firebase and Mercado Pago integration is left for the next version.
 
-- **APK:** [`apk/Nucleo-v1.0.apk`](apk/Nucleo-v1.0.apk) (Android 8.0 o superior).
-- **Cuentas de prueba** (contraseña `12345678`):
+## Download and try it
 
-| Rol | Correo |
+- **APK:** [`apk/Nucleo-v1.0.apk`](apk/Nucleo-v1.0.apk) (Android 8.0 or higher).
+- **Test accounts** (password `12345678`):
+
+| Role | Email |
 |---|---|
-| Comprador | `comprador@nucleo.co` |
-| Vendedor | `vendedor@nucleo.co` |
-| Administrador | `admin@nucleo.co` |
+| Buyer | `comprador@nucleo.co` |
+| Seller | `vendedor@nucleo.co` |
+| Administrator | `admin@nucleo.co` |
 
-El ingreso con huella se habilita después del primer ingreso con contraseña, en un dispositivo que tenga una huella registrada.
+Fingerprint login is enabled after the first password login, on a device that has a registered fingerprint.
 
-## Pantallas por rol
+## Screens by role
 
-| Rol | Pantallas |
+| Role | Screens |
 |---|---|
-| Transversal | Splash, inicio de sesión (correo y huella), registro, registro de comercio, recuperar contraseña, barra de navegación inferior por rol |
-| Comprador | Inicio, catálogo, detalle de producto (comparación entre comercios), carrito, pago, perfil con pedidos |
-| Vendedor | Mis productos (CRUD), formulario de producto con cámara y galería, pedidos recibidos, perfil del vendedor |
-| Administrador | Dashboard, usuarios (listado, creación, edición, eliminación), productos (ocultar/mostrar), reporte de ventas, solicitudes de comercios |
+| Shared | Splash, login (email and fingerprint), sign up, business registration, password recovery, role-based bottom navigation bar |
+| Buyer | Home, catalog, product detail (price comparison across retailers), cart, checkout, profile with orders |
+| Seller | My products (CRUD), product form with camera and gallery, incoming orders, seller profile |
+| Administrator | Dashboard, users (list, create, edit, delete), products (hide/show), sales report, business applications |
 
-## Tecnología
+## Tech stack
 
-- Kotlin, layouts XML y **ViewBinding**
-- **Navigation Component**: una Activity por rol (`activity_comprador.xml`, `activity_vendedor.xml`, `activity_admin.xml`) con fragments y `BottomNavigationView`
-- **Material Design 3** con tema oscuro propio
-- **BiometricPrompt** para el ingreso y la confirmación del pago con huella
-- **SplashScreen API** para la pantalla de bienvenida
+- Kotlin, XML layouts and **ViewBinding**
+- **Navigation Component**: one Activity per role (`activity_comprador.xml`, `activity_vendedor.xml`, `activity_admin.xml`) with fragments and `BottomNavigationView`
+- **Material Design 3** with a custom dark theme
+- **BiometricPrompt** for login and fingerprint payment confirmation
+- **SplashScreen API** for the welcome screen
 - `minSdk 26`, `targetSdk 34`
 
-## Estructura
+## Structure
 
 ```
 app/src/main/
 ├── java/com/nucleo/tienda/
-│   ├── data/            Modelos y repositorio con datos de ejemplo
-│   ├── util/            Formato de precios, sesión y biometría
+│   ├── data/            Models and repository with sample data
+│   ├── util/            Price formatting, session and biometrics
 │   └── ui/
-│       ├── splash/      Pantalla de bienvenida
-│       ├── auth/        Login, registro, registro de comercio, recuperar contraseña
-│       ├── comprador/   Inicio, catálogo, detalle, carrito, pago
-│       ├── vendedor/    Productos, formulario de producto, pedidos
-│       ├── admin/       Dashboard, usuarios, productos, ventas, solicitudes
-│       └── comun/       Perfil, adaptadores, diálogos y componentes compartidos
+│       ├── splash/      Welcome screen
+│       ├── auth/        Login, sign up, business registration, password recovery
+│       ├── comprador/   Home, catalog, detail, cart, checkout
+│       ├── vendedor/    Products, product form, orders
+│       ├── admin/       Dashboard, users, products, sales, applications
+│       └── comun/       Profile, adapters, dialogs and shared components
 └── res/
-    ├── layout/          Activities, fragments, ítems de lista e includes reutilizables
+    ├── layout/          Activities, fragments, list items and reusable includes
     ├── values/          colors, themes, styles, dimens, strings, attrs
-    ├── color/           Selectores de color por estado (chips, barra inferior, campos)
-    ├── drawable/        Formas (shape, layer-list) e íconos vectoriales
-    ├── font/            IBM Plex Sans y Space Grotesk
-    ├── menu/            Menús de la barra inferior por rol
-    └── navigation/      Grafos de navegación por rol
+    ├── color/           Per-state color selectors (chips, bottom bar, fields)
+    ├── drawable/        Shapes (shape, layer-list) and vector icons
+    ├── font/            IBM Plex Sans and Space Grotesk
+    ├── menu/            Bottom bar menus per role
+    └── navigation/      Navigation graphs per role
 ```
 
-## Recursos visuales
+## Visual resources
 
-- **Colores** (`values/colors.xml`): fondo oscuro `#0B1220`, acción principal `#2563EB` y un color de acento por rol (comprador azul, vendedor cian, administrador violeta).
-- **Temas** (`values/themes.xml`): `Theme.Nucleo` hereda de Material 3 oscuro y redefine colores, tipografía y estilos de componentes. `Theme.Nucleo.Comprador`, `.Vendedor` y `.Admin` solo cambian el atributo propio `colorRol` (declarado en `values/attrs.xml`).
-- **Estilos** (`values/styles.xml`): botones, campos de texto, tarjetas, chips, barra de navegación, píldoras de estado y apariencias de texto.
-- **Drawables**: formas redondeadas, borde punteado, barras de la gráfica y 46 íconos vectoriales propios.
+- **Colors** (`values/colors.xml`): dark background `#0B1220`, primary action `#2563EB` and one accent color per role (buyer blue, seller cyan, administrator violet).
+- **Themes** (`values/themes.xml`): `Theme.Nucleo` inherits from Material 3 dark and redefines colors, typography and component styles. `Theme.Nucleo.Comprador`, `.Vendedor` and `.Admin` only change the custom `colorRol` attribute (declared in `values/attrs.xml`).
+- **Styles** (`values/styles.xml`): buttons, text fields, cards, chips, navigation bar, status pills and text appearances.
+- **Drawables**: rounded shapes, dashed border, chart bars and 46 custom vector icons.
 
-## Compilar
+## Build
 
-1. Abrir la carpeta del proyecto en Android Studio (**File → Open**) y esperar el *Gradle Sync*.
-2. Ejecutar con ▶ **Run** en un emulador o un celular con depuración USB.
-3. Para generar el APK: **Build → Build App Bundle(s) / APK(s) → Build APK(s)**.
+1. Open the project folder in Android Studio (**File → Open**) and wait for the Gradle Sync.
+2. Press **Run** on an emulator or a phone with USB debugging enabled.
+3. To generate the APK: **Build → Build App Bundle(s) / APK(s) → Build APK(s)**.
 
-## Alcance de esta versión
+## Scope of this version
 
-Fuera del alcance por ahora: Firebase (autenticación, base de datos y almacenamiento), la pasarela real de Mercado Pago, la geolocalización y el almacenamiento permanente de fotos. La cámara funciona para la vista previa de fotos de productos, del perfil y de los documentos del comercio.
+Out of scope for now: Firebase (authentication, database and storage), the real Mercado Pago gateway, geolocation and permanent photo storage. The camera works for previewing product, profile and business document photos.
+
+## Notes / pending
+
+- UI text inside the `Rol`, `EstadoCuenta`, `EstadoPedido` and `Categoria` enums (`data/Modelos.kt`) is hardcoded in Kotlin instead of `strings.xml`, unlike the rest of the app.
+- Several `ImageView` elements are missing `contentDescription`; decorative ones should declare `android:importantForAccessibility="no"`.
+- `compileSdk` is 35 while `targetSdk` is 34.
+- A few unused strings and two unused drawables (`ic_escudo`, `ic_filtro`) are still declared.
+- The APK is committed to the repository; publishing it through GitHub Releases would keep the history smaller.
+- The project has no unit or instrumentation tests.
 
 ---
-Proyecto académico · Desarrollo de Aplicaciones Móviles Nativas · Fundación Universitaria Compensar · 2026
+Academic project · Native Mobile Application Development · Fundacion Universitaria Compensar · 2026
